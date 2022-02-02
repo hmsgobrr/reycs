@@ -25,11 +25,13 @@ namespace ReyCS
         {
             sceneCache.Add(scene.GetType(), scene);
 
-            Raylib.InitWindow(800, 480, "Hello World");
+            Raylib.InitWindow(500, 650, "Hello World");
 
             while (!Raylib.WindowShouldClose())
             {
                 Raylib.BeginDrawing();
+
+                scene.draw();
 
                 Raylib.EndDrawing();
             }
