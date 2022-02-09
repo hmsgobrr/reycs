@@ -6,6 +6,9 @@ namespace ReyCS
 {
     static class Program
     {
+        public static int SWIDTH = 500;
+        public static int SHEIGHT = 650;
+ 
         private static Scene scene = new MainMenu();
 
         private static Dictionary<Type, Scene> sceneCache = new Dictionary<Type, Scene>();
@@ -25,7 +28,7 @@ namespace ReyCS
         {
             sceneCache.Add(scene.GetType(), scene);
 
-            Raylib.InitWindow(500, 650, "Hello World");
+            Raylib.InitWindow(SWIDTH, SHEIGHT, "Hello World");
 
             while (!Raylib.WindowShouldClose())
             {
